@@ -24,4 +24,4 @@ def secure_token
   end
 end
 
-sportiveworld::Application.config.secret_key_base = secure_token
+Sportiveworld::Application.config.secret_key_base = secure_token

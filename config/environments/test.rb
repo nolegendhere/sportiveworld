@@ -14,7 +14,7 @@ Rails.application.configure do
 
   # Configure static asset server for tests with Cache-Control for performance.
   config.serve_static_assets  = true
-  config.static_cache_control = 'public, max-age=3600'
+  config.static_cache_control = "public, max-age=3600"
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -33,7 +33,8 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  
+  # Speed up tests by lowering bcrypt's cost function.
+  ActiveModel::SecurePassword.min_cost = true
 
-  # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
 end
